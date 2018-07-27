@@ -5,11 +5,11 @@
         margin: 0 auto 0.5em auto;
     }
 
-    padding: 0 !important;
-    margin: 0 !important;
 
 
+padding-top: 2em;
     @include media($screen-md) {
+    	padding-top: 0;
         height: 400px;
         top: 50%;
         position: absolute;
