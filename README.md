@@ -1,2 +1,2 @@
-# hanora
-Website for hanora
+# moonshineandco
+Splash page for moonshine
