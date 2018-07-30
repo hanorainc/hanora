@@ -1,2 +1,2 @@
-# moonshineandco
-Splash page for moonshine
+# Hanora
+Splash page and preview info for Hanora 
