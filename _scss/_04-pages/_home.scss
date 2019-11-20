@@ -65,6 +65,17 @@ i {
             }
         }
     }
+
+    @include media($max-xs) {}
+
+
+    @include media($max-xsm) {}
+
+
+    @include media($max-sm) {
+        display: block;
+        margin-top: 3rem;
+    }
 }
 
 h2, p, .button {
@@ -83,7 +94,14 @@ h2, p, .button {
 h2 {
     margin-top: 1rem;
     margin-bottom: 1rem;
-    font-size: 2rem;
+    font-weight: 600;
+    letter-spacing: 2px;
+
+    @include media($max-sm) {
+        font-size: 1.6rem;
+        margin-top: 3rem;
+        letter-spacing: 2.5px;
+    }
 }
 
 p {
