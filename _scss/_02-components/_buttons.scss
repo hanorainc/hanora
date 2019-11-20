@@ -1,23 +1,21 @@
 .button {
+    @include accelerate;
+
     border: 2px solid;
     padding: 0.4em 1em;
     font-size: 0.85em;
     font-weight: bold;
     line-height: 0;
     letter-spacing: 3px;
-}
+    transition: background-position 0.2s $base-animation, color 0.2s $base-animation, transform 0.2s $base-animation;
+    background-image: linear-gradient(to top, white 50%, transparent 50%);
+    background-size: 100% 220%;
+    background-origin: center;
+    background-position: 100% 0%;
 
-.vote {
-    // @include media($max-sm) {
-    //     position: fixed;
-    //     bottom: 0;
-    //     left: 0;
-    //     right: 0;
-    //     width: 100%;
-    //     text-align: center;
-    //     padding: 2em 0;
-    //     background: $green;
-    //     color: white !important;
-    //     border: 0;
-    // }
+    &:hover, &:focus {
+        color: black;
+        background-position: 100% 98%;
+        transition: background-position 0.2s $base-animation, color 0.2s $base-animation, transform 0.2s $base-animation;
+    }
 }
