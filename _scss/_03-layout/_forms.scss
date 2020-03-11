@@ -1,6 +1,6 @@
-$formbordercolor: black;
-$formtextcolor: black;
-$formplaceholdercolor: blue;
+$formbordercolor: $black;
+$formtextcolor: $black;
+$formplaceholdercolor: $black;
 
 $forminvalidbackground: red;
 $forminvalidcolor: white;
@@ -8,7 +8,7 @@ $forminvalidcolor: white;
 $formsuccessbackground: orange;
 $formsuccesstextcolor: white;
 
-$formbuttonbackground: orange;
+$formbuttonbackground: #222222;
 $formbuttoncolor: white;
 
 fieldset {
@@ -33,10 +33,11 @@ select,
 textarea,
 #{$all-text-inputs},[type="submit"] {
     font-size: 1.1rem;
+    margin-bottom: 1rem;
     font-family: $base-sans-font;
     color: $formtextcolor;
     appearance: none;
-
+    width: 100%;
     border: 1px solid $formbordercolor;
     border-radius: 0 !important;
     box-shadow: none;
@@ -100,11 +101,13 @@ select {
     width: 100%;
 }
 
-// [type="submit"] {
-//     display: block;
-//     appearance: none;
-//     border: none;
-// }
+[type="submit"] {
+    display: block;
+    appearance: none;
+    border: none;
+    margin: 0 auto;
+    width: auto;
+}
 
 .screenreader, .screen-reader-text {
     position: absolute;
@@ -177,4 +180,18 @@ button, [type="submit"] {
     color: $formbuttoncolor;
     letter-spacing: 3px;
     text-transform: uppercase;
+    padding: 14px 24px;
+    cursor: pointer;
+    border: 1px solid transparent;
+    transition: color 0.2s $base-animation, background-color 0.2s $base-animation;
+
+    &:hover {
+        transition: color 0.2s $base-animation, background-color 0.2s $base-animation;
+        background-color: lighten($formbuttonbackground, 10%);
+    }
+
+    &:active {
+        transition: color 0.2s $base-animation, background-color 0.2s $base-animation;
+        background-color: lighten($formbuttonbackground, 15%);
+    }
 }

@@ -78,7 +78,7 @@ i {
     }
 }
 
-h2, p, .button {
+h2, p, .button, form div {
     @include accelerate;
 
     will-change: transform;
@@ -89,6 +89,24 @@ h2, p, .button {
     animation-fill-mode: both;
     animation-delay: 1.6s;
     animation-play-state: running;
+}
+
+form div {
+    &:nth-of-type(1) {
+        animation-delay: 1.9s;
+    }
+
+    &:nth-of-type(2) {
+        animation-delay: 2.0s;
+    }
+
+    &:nth-of-type(3) {
+        animation-delay: 2.1s;
+    }
+
+    &:nth-of-type(4) {
+        animation-delay: 2.2s;
+    }
 }
 
 h2 {
