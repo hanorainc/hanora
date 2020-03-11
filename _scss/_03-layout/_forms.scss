@@ -176,22 +176,28 @@ div.wpcf7-mail-sent-ok {
 }
 
 button, [type="submit"] {
-    background-color: $formbuttonbackground;
-    color: $formbuttoncolor;
-    letter-spacing: 3px;
+    background-color: transparent;
+    color: white;
+
+    @include accelerate;
+
     text-transform: uppercase;
-    padding: 14px 24px;
+    border: 2px solid;
+    font-size: 1.3rem;
+    padding: 1.3rem 1.5rem;
+    font-weight: bold;
+    line-height: 0;
+    letter-spacing: 3px;
+    transition: background-position 0.2s $base-animation, color 0.2s $base-animation, transform 0.2s $base-animation;
+    background-image: linear-gradient(to top, white 50%, transparent 50%);
+    background-size: 100% 220%;
+    background-origin: center;
+    background-position: 100% 0%;
     cursor: pointer;
-    border: 1px solid transparent;
-    transition: color 0.2s $base-animation, background-color 0.2s $base-animation;
 
-    &:hover {
-        transition: color 0.2s $base-animation, background-color 0.2s $base-animation;
-        background-color: lighten($formbuttonbackground, 10%);
-    }
-
-    &:active {
-        transition: color 0.2s $base-animation, background-color 0.2s $base-animation;
-        background-color: lighten($formbuttonbackground, 15%);
+    &:hover, &:focus {
+        color: black;
+        background-position: 100% 98%;
+        transition: background-position 0.2s $base-animation, color 0.2s $base-animation, transform 0.2s $base-animation;
     }
 }

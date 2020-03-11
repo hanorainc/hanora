@@ -290,20 +290,34 @@ div.wpcf7-mail-sent-ok {
   color: white; }
 
 button, [type="submit"] {
-  background-color: #222222;
+  background-color: transparent;
   color: white;
-  letter-spacing: 3px;
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  -ms-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -webkit-transform: translate3d(0, 0, 0);
+  -moz-transform: translate3d(0, 0, 0);
+  -ms-transform: translate3d(0, 0, 0);
+  -o-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
   text-transform: uppercase;
-  padding: 14px 24px;
-  cursor: pointer;
-  border: 1px solid transparent;
-  transition: color 0.2s cubic-bezier(0.4, 0.01, 0.165, 0.99), background-color 0.2s cubic-bezier(0.4, 0.01, 0.165, 0.99); }
-  button:hover, [type="submit"]:hover {
-    transition: color 0.2s cubic-bezier(0.4, 0.01, 0.165, 0.99), background-color 0.2s cubic-bezier(0.4, 0.01, 0.165, 0.99);
-    background-color: #3c3b3b; }
-  button:active, [type="submit"]:active {
-    transition: color 0.2s cubic-bezier(0.4, 0.01, 0.165, 0.99), background-color 0.2s cubic-bezier(0.4, 0.01, 0.165, 0.99);
-    background-color: #484848; }
+  border: 2px solid;
+  font-size: 1.3rem;
+  padding: 1.3rem 1.5rem;
+  font-weight: bold;
+  line-height: 0;
+  letter-spacing: 3px;
+  transition: background-position 0.2s cubic-bezier(0.4, 0.01, 0.165, 0.99), color 0.2s cubic-bezier(0.4, 0.01, 0.165, 0.99), transform 0.2s cubic-bezier(0.4, 0.01, 0.165, 0.99);
+  background-image: linear-gradient(to top, white 50%, transparent 50%);
+  background-size: 100% 220%;
+  background-origin: center;
+  background-position: 100% 0%;
+  cursor: pointer; }
+  button:hover, button:focus, [type="submit"]:hover, [type="submit"]:focus {
+    color: black;
+    background-position: 100% 98%;
+    transition: background-position 0.2s cubic-bezier(0.4, 0.01, 0.165, 0.99), color 0.2s cubic-bezier(0.4, 0.01, 0.165, 0.99), transform 0.2s cubic-bezier(0.4, 0.01, 0.165, 0.99); }
 
 .bg--black {
   background-color: #000000; }
